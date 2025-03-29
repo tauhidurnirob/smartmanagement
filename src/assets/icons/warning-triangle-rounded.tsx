@@ -1,0 +1,14 @@
+import { createSvgIcon } from '@mui/material'
+
+export const WarningTriangleRounded = createSvgIcon(
+  <svg viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path
+      d='M6.00003 4.25133V6.25086M6.00003 8.2504H6.0049M5.32545 1.69777L1.31854 8.79947C1.09629 9.19338 0.985168 9.39034 1.00159 9.55195C1.01592 9.69297 1.08791 9.82109 1.19964 9.90442C1.32774 10 1.54954 10 1.99311 10H10.0069C10.4505 10 10.6723 10 10.8004 9.90442C10.9121 9.82109 10.9841 9.69297 10.9984 9.55195C11.0148 9.39034 10.9037 9.19338 10.6815 8.79947L6.67456 1.69777C6.45314 1.30528 6.34241 1.10903 6.19796 1.04312C6.07193 0.985627 5.92807 0.985627 5.80209 1.04312C5.6576 1.10903 5.54686 1.30528 5.32545 1.69777Z'
+      stroke='currentColor'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
+  </svg>,
+  'WarningTriangleRounded'
+)

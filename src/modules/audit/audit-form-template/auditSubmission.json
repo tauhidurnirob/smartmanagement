@@ -1,0 +1,93 @@
+{
+  "id": 1,
+  "name": "Audit form template name",
+  "remark": "remark",
+  "formType": "form 8",
+  "projectIds": [1,2],
+  "formId": 1,
+  "dynamicFields": [
+    {
+      "id": 1,
+      "name": "text1",
+      "type": "text",
+      "value": "my name"
+    },
+    {
+      "id": 2,
+      "name": "rating1",
+      "type": "rating",
+      "templateId": 1,
+      "templateStyle": "text",
+      "elements": [
+        {
+          "elementId": 1,
+          "value": {
+            "rating": 5,
+            "text": "a",
+            "remark": "remark",
+            "photo": "http://url",
+            "noAnswer": false
+          }
+        },
+        {
+          "elementId": 2,
+          "value": {
+            "rating": 5,
+            "text": "a",
+            "remark": "remark",
+            "photo": "http://url",
+            "noAnswer": false
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "paragraph1",
+      "type": "paragraph",
+      "value": "this will be the description of the paragraph"
+    },
+    {
+      "id": 4,
+      "name": "shortDescription1",
+      "type": "shortDescription",
+      "value": "value of short description"
+    },
+    {
+      "id": 5,
+      "name": "longDescription11",
+      "type": "longDescription",
+      "value": "value of long description"
+    },
+    {
+      "id": 6,
+      "name": "dropdown1",
+      "type": "dropdown",
+      "value": "value1"
+    },
+    {
+      "id": 7,
+      "name": "singleChoise1",
+      "type": "singleChoise",
+      "value": "value1"
+    },
+    {
+      "id": 8,
+      "name": "uploadFile1",
+      "type": "uploadFile",
+      "value": ["url://", "url://"]
+    },
+    {
+      "id": 9,
+      "name": "uploadImage1",
+      "type": "uploadImage",
+      "value": ["url://", "url://"]
+    },
+    {
+      "id": 10,
+      "name": "uploadVideo1",
+      "type": "uploadVideo",
+      "value": ["url://", "url://"]
+    }
+  ]
+}
