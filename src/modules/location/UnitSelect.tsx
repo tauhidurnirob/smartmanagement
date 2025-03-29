@@ -1,0 +1,104 @@
+import React, { useMemo } from 'react'
+import { Box, SxProps, Collapse } from '@mui/material'
+import { ISelectItem } from '../../types/common'
+import FilterLabel from '../common/FilterLabel'
+import InfiniteMultipleSelect from '../common/InfiniteMultipleSelect'
+import StyledAlert from '../common/StyledAlert'
+import { IUnit } from '../../api/models'
+
+interface IProps {
+  selected: ISelectItem[]
+  onChange: (items: ISelectItem[]) => void
+  hiddenLabel?: boolean
+  isSingleSelect?: boolean
+  selectStyle?: SxProps
+  disableAllSelect?: boolean
+  hiddenErrorMessage?: boolean
+  error?: boolean
+  helperText?: React.ReactNode
+  placeholder?: string
+  textColor?: string
+  projectIds?: number[]
+  locationIds?: number[]
+  buildingIds?: number[]
+  levelIds?: number[]
+  areaIds?: number[]
+  disabled?: boolean
+}
+
+const UnitSelect = ({
+  selected,
+  hiddenLabel,
+  onChange,
+  selectStyle,
+  isSingleSelect,
+  disableAllSelect,
+  hiddenErrorMessage,
+  error,
+  helperText,
+  placeholder,
+  textColor,
+  projectIds,
+  locationIds,
+  buildingIds,
+  levelIds,
+  areaIds,
+  disabled,
+}: IProps) => {
+  const dependencyIds = useMemo(() => {
+    return [
+      ...(projectIds || []),
+      ...(locationIds || []),
+      ...(buildingIds || []),
+      ...(levelIds || []),
+      ...(areaIds || []),
+    ]
+  }, [projectIds, locationIds, buildingIds, levelIds, areaIds])
+
+  const handleParseItem = (item: IUnit) => {
+    return {
+      value: item.id,
+      label: item.name,
+      item,
+    }
+  }
+
+  const handleChange = (items: ISelectItem[]) => {
+    onChange(items)
+  }
+  return (
+    <Box>
+      {!hiddenLabel && <FilterLabel text='Unit' />}
+      <InfiniteMultipleSelect
+        selectedItems={selected}
+        onChange={handleChange}
+        limit={10}
+        labelForAll={placeholder ? placeholder : disableAllSelect ? 'Select unit' : 'All Units'}
+        selectStyle={selectStyle}
+        isSingleSelect={isSingleSelect}
+        allowAllSelect={!disableAllSelect}
+        textColor={textColor}
+        dependencyIds={dependencyIds}
+        disabled={disabled}
+        queryApiKey='useGetUnitListQuery'
+        onParseItem={handleParseItem}
+        queryFilters={{
+          ...(projectIds && { projectIds }),
+          ...(locationIds && { locationIds }),
+          ...(buildingIds && { buildingIds }),
+          ...(levelIds && { levelIds }),
+          ...(areaIds && { areaIds }),
+        }}
+      />
+      {!hiddenErrorMessage && (
+        <Collapse in={error}>
+          <StyledAlert severity='error' variant='outlined' sx={{ mt: '5px' }}>
+            {helperText}
+          </StyledAlert>
+        </Collapse>
+      )}
+    </Box>
+  )
+}
+
+export default UnitSelect

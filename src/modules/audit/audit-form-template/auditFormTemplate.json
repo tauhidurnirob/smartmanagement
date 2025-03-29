@@ -1,0 +1,200 @@
+{
+  "id": 1,
+  "name": "Audit form template name",
+  "remark": "remark",
+  "formType": "form 8",
+  "projectIds": [1,2],
+  "content": {
+    "logoUrl": "http://logo.com",
+    "title": "test form",
+    "subTitle": "test subTitle",
+    "fields": [
+      {
+        "id": 1,
+        "name": "text1",
+        "type": "text",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder"
+        }
+      },
+      {
+        "id": 12,
+        "name": "layout1*2",
+        "type": "layout1*2",
+        "child": [
+          {
+            "id": 121,
+            "name": "text1",
+            "type": "text",
+            "option": {
+              "label": "Name",
+              "required": true,
+              "placeholder": "placeholder"
+            }
+          },
+          {
+            "id": 122,
+            "name": "longDescription11",
+            "type": "longDescription",
+            "option": {
+              "label": "Name",
+              "required": true,
+              "placeholder": "placeholder"
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "rating1",
+        "type": "rating",
+        "options": [
+          {
+            "label": "Rating - Select the Score",
+            "description": "description",
+            "required": false,
+            "template": {
+              "inspectionUnit": "Entrance and Lobby",
+              "style": "text",
+              "noOfRating": 5,
+              "texts": ["a", "b"],
+              "ratingStart": 0,
+              "ratingEnd": 10,
+              "allowUploadImage": true,
+              "allowWriteRemark": true,
+              "allowNaOption": false,
+              "elements": [
+                {
+                  "id": 1,
+                  "option": {
+                    "text": "Surfaces of door / frame / closer",
+                    "isRequired": false
+                  }
+                },
+                {
+                  "id": 2,
+                  "option": {
+                    "text": "Surfaces of door / frame / closer",
+                    "isRequired": false
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "paragraph1",
+        "type": "paragraph",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder"
+        }
+      },
+      {
+        "id": 4,
+        "name": "shortDescription1",
+        "type": "shortDescription",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder"
+        }
+      },
+      {
+        "id": 5,
+        "name": "longDescription11",
+        "type": "longDescription",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder"
+        }
+      },
+      {
+        "id": 6,
+        "name": "dropdown1",
+        "type": "dropdown",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder",
+          "option": [
+            {"label": "label 1", "value": "value1"},
+            {"label": "label 2", "value": "value2"}
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "name": "singleChoise1",
+        "type": "singleChoise",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder",
+          "option": [
+            {"label": "label 1", "value": "value1"},
+            {"label": "label 2", "value": "value2"}
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "name": "uploadFile1",
+        "type": "uploadFile",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder",
+          "btnText": "Upload File",
+          "multipleUpload": true
+        }
+      },
+      {
+        "id": 9,
+        "name": "uploadImage1",
+        "type": "uploadImage",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder",
+          "multipleUpload": true
+        }
+      },
+      {
+        "id": 10,
+        "name": "uploadVideo1",
+        "type": "uploadVideo",
+        "option": {
+          "label": "Name",
+          "required": true,
+          "placeholder": "placeholder",
+          "multipleUpload": true
+        }
+      },
+      {
+        "id": 11,
+        "name": "divider1",
+        "type": "divider",
+        "option": {
+          "label": "Name",
+          "color": "#ffffff",
+          "style": ["Solid", "Double", "Dotted", "Curly", "Curved"]
+        }
+      },
+      {
+        "id": 12,
+        "name": "button1",
+        "type": "button",
+        "option": {
+          "label": "Name"
+        }
+      }
+    ]
+  }
+}
