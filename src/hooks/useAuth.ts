@@ -26,33 +26,6 @@ const useAuth = () => {
     console.log(userPermissions)
     const allowedRoutes = getAllowedNavRoutes(navRouteInfos, userPermissions);
     const auditModule = allowedRoutes?.filter((r) => r.label === 'Audit');
-    // const auditModuleForRep = [
-    //   {
-    //     path: "/audit",
-    //     label: "Audit",
-    //     icon: AuditIcon,
-    //     children: [
-    //       {
-    //         path: "/audit/overview",
-    //         label: "Overview",
-    //         permissions: [
-    //           "view-audit-overview-page",
-    //           "view-audit-overview-page"
-    //         ]
-    //       },
-    //       {
-    //         path: '/audit/insight',
-    //         label: 'Performance Data',
-    //         permissions: [],
-    //       },
-    //       {
-    //         path: '/audit/result',
-    //         label: 'Audit Result',
-    //         permissions: [],
-    //       },
-    //     ]
-    //   }
-    // ];
 
     const filteredRoutes = isLs2
       ? auditModule || []
