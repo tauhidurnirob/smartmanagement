@@ -1,4 +1,4 @@
-import { FC, useMemo, useState, useRef } from 'react'
+import { FC, useMemo, useRef } from 'react'
 import {
   Box,
   Card,
@@ -7,41 +7,26 @@ import {
   Button,
   Grid,
   useTheme,
-  Select,
-  MenuItem,
   Paper,
   Stack,
-  DialogContent,
 } from '@mui/material'
-import dayjs, { Dayjs } from 'dayjs'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { toast } from 'react-toastify'
-import { Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { LoadingButton } from '@mui/lab'
 
 import TextareaWithLabel from '../../common/TextareaWithLabel'
 import { ISelectItem } from '../../../types/common'
-import { AUDIT_SCHEDULE_FREQUENCYS } from '../../../helpers/constants'
 
-import SelectDate from '../../common/SelectDate'
-
-import { IGetOneTask, IReqTaskDetail, IReqTaskList, PostCreateTask } from '../../../types/task'
+import { IGetOneTask } from '../../../types/task'
 import Api from '../../../api'
-
-import BackDrop from '../../common/BackDrop'
-import { titleCase } from '../../../helpers/customFunctions'
-import DeleteDialog from '../../common/DeleteDialog'
 import LocationSelect from '../../location/LocationSelect'
-import { DATE_FORMAT } from '../../../constants/common'
-import SimpleSelect from '../../common/SimpleSelect'
 import ProjectSelect from '../../audit/project-sites/ProjectSelect'
-import FilterLabel from '../../common/FilterLabel'
 import BuildingSelect from '../../location/BuildingSelect'
 import LevelSelect from '../../location/LevelSelect'
 import AreaSelect from '../../location/AreaSelect'
 import UnitSelect from '../../location/UnitSelect'
-import { IAlertListByProjectFilters } from '../../../types/alert'
 import PremiseCategorySelect from './PremiseCategorySelect'
 import TaskActivitySelect from './TaskActivitySelect'
 
