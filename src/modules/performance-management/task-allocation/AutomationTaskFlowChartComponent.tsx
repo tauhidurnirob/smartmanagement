@@ -1,4 +1,4 @@
-import { Button, Input, Popover, Popper, styled, Box, Fade, Typography } from '@mui/material'
+import { Button, Popper, styled, Box, Typography } from '@mui/material'
 import { AddFlowIcon } from '../../../assets/icons/add-flow'
 import { RemoveFlowIcon } from '../../../assets/icons/remove-flow'
 import { Node } from '@antv/x6'
@@ -14,14 +14,12 @@ import {
   nodeChoose,
   nodeStatus,
   addBtn,
-  activitBtns,
   triggelineButton,
   deleteSty,
 } from './AutomationTaskFlowChartComponentStyled'
 import TextFieldWithLabel from '../../common/TextFieldWithLabel'
 import SvgIcon from '@mui/material/SvgIcon'
-import React, { useState, useRef, useMemo } from 'react'
-import { number } from 'yup'
+import { useState, useRef, useMemo } from 'react'
 
 const ActivityBtns = styled(Button)({
   border: '1px solid #C7C7C7',
