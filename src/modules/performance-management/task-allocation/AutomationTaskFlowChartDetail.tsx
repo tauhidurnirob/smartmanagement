@@ -1,7 +1,7 @@
-import React, { FC, useState, useRef, useEffect, useMemo } from 'react'
+import React, { FC, useState, useRef, useEffect } from 'react'
 import { Box, Button, Divider } from '@mui/material'
 import { IAuditSchedule } from '../../../types/audit'
-import { Cell, Edge, Graph, Node } from '@antv/x6'
+import { Cell, Graph, Node } from '@antv/x6'
 import { register } from '@antv/x6-react-shape'
 import * as Yup from 'yup'
 import {
@@ -126,7 +126,6 @@ type ThreeData = {
 }
 
 const AutomationTaskCreateDetail: FC<IProps> = ({
-  schedule,
   PostAutomation,
   Flowdetail,
   UpdateAutomation,
